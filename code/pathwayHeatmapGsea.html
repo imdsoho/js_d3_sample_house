@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko" class="h-100" data-bs-theme="auto"
+      xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Transcriptome Analysis Web Service</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="KiIOM Transcriptome Analysis Web Service">
+    <meta name="author" content="Korea Institute Oriental Medicine">
+
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self';
+              connect-src 'self' http: https:;
+              script-src 'self' 'unsafe-inline' http: https:;
+              img-src 'self' data: http: https:;
+              font-src 'self' http: https:;
+              style-src 'self' 'unsafe-inline' http: https:;">
+    <link rel="icon" href="/favicon.ico">
+
+    <!-- common -->
+    <link href="/static/assets/css/bootstrap-5.3.7/bootstrap.css" rel="stylesheet">
+    <script src="/static/assets/js/jquery/jquery-3.7.1.js" type="text/javascript"></script>
+    <script src="/static/assets/js/bootstrap-5.3.7/bootstrap.bundle.js" type="text/javascript"></script>
+    <script src="/static/assets/js/axios/axios.min.js" type="text/javascript"></script>
+    <script src="/static/assets/js/d3/d3.v7.js" type="text/javascript"></script>
+    <script src="/static/assets/js/d3/color-legend.js" type="text/javascript"></script>
+    <script src="/static/assets/js/d3/category-legend.js" type="text/javascript"></script>
+
+    <script src="/static/assets/js/lodash/lodash-4.17.15.js" type="text/javascript"></script>
+    <!-- common -->
+</head>
+
+<link href="/static/sbl/css/heatmap/heatmap.css" rel="stylesheet">
+<script defer src="/static/sbl/js/heatmap/heatmap.js" type="text/javascript"></script>
+<script defer src="/static/sbl/js/heatmap/heatmap.d3.v7.js" type="text/javascript"></script>
+
+<body class="d-flex flex-column min-vh-100">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="k-col-80 position-relative min-vh-100">
+            <!-- contents-->
+            <div class="row">
+                <!-- title description -->
+                <div class="col px-1">
+                    <div class="px-2 pt-2 pb-5 mx-0 mt-0 mb-0 k-bg-secondary rounded-2">
+                        <h1 class="h4">Cluster Heatmap Zoom Sample</h1>
+                        [DATA] http://koremap.systemsbiology.ai.kr/deg-pathway-heatmap-gsea/
+                    </div>
+                </div>
+                <!-- title description -->
+
+                <div class="small p-2 my-2">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card mb-1">
+                                <div class="row">
+                                    <div class="p-1 mx-2 mt-0 d-flex">
+                                        <div class="col m-1 p-3 overflow-auto" style="max-height: 700px; min-height: 400px;">
+                                            <svg id="heatmapChart"></svg>
+                                        </div>
+                                        <div class="col-1 m-1 p-1 d-flex justify-content-between">
+                                            <div class="fw-normal text-muted p-1">
+                                                <div class="fw-normal text-muted mx-0 mt-3 mb-1" id="heatmapPadjLegend"></div>
+                                                <div class="fw-normal text-muted mx-3 mt-1" id="heatmapNesLegend"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- contents-->
+        </div>
+    </div>
+</div>
+
+<script type="application/javascript">
+    //$(document).ready(function () {
+    $(window).on('load', function () {
+    });
+</script>
+</body>
+</html>

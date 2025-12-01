@@ -1,0 +1,2169 @@
+{
+    "caseSelectData": {
+        "cellId": [
+            ""
+        ],
+        "perturId": [
+            ""
+        ],
+        "cvcIdsCandidates": [
+            ""
+        ],
+        "cvcIds": [
+            "2",
+            "36",
+            "37",
+            "38",
+            "78",
+            "79"
+        ],
+        "cellLineData": [
+            {
+                "cellId": 1,
+                "name": "A549"
+            },
+            {
+                "cellId": 2,
+                "name": "HepG2"
+            },
+            {
+                "cellId": 3,
+                "name": "HT29"
+            },
+            {
+                "cellId": 4,
+                "name": "SW1783"
+            }
+        ],
+        "perturbagenData": [
+            {
+                "perturId": 1,
+                "name": "Wortmannin",
+                "abbreviation": "Wortmannin"
+            },
+            {
+                "perturId": 2,
+                "name": "Poria Sclerotium",
+                "abbreviation": "PS"
+            },
+            {
+                "perturId": 3,
+                "name": "Atractylodis Rhizoma Alba",
+                "abbreviation": "ARA"
+            },
+            {
+                "perturId": 4,
+                "name": "Glycyrrhizae Radix et Rhizoma",
+                "abbreviation": "GRR"
+            },
+            {
+                "perturId": 5,
+                "name": "Ginseng Radix",
+                "abbreviation": "GR"
+            },
+            {
+                "perturId": 6,
+                "name": "Angelicae Gigantis Radix",
+                "abbreviation": "AGR"
+            },
+            {
+                "perturId": 7,
+                "name": "Paeoniae Radix",
+                "abbreviation": "PnR"
+            },
+            {
+                "perturId": 8,
+                "name": "Cnidii Rhizoma",
+                "abbreviation": "CR"
+            },
+            {
+                "perturId": 9,
+                "name": "Rehmanniae Radix Preparata",
+                "abbreviation": "RRP"
+            },
+            {
+                "perturId": 10,
+                "name": "Cinnamomi Cortex",
+                "abbreviation": "CC"
+            },
+            {
+                "perturId": 11,
+                "name": "Astragali Radix",
+                "abbreviation": "AtR"
+            },
+            {
+                "perturId": 12,
+                "name": "Sagunja-tang",
+                "abbreviation": "SGJT"
+            },
+            {
+                "perturId": 13,
+                "name": "Samul-tang",
+                "abbreviation": "SMT"
+            },
+            {
+                "perturId": 14,
+                "name": "Palmul-tang",
+                "abbreviation": "PMT"
+            },
+            {
+                "perturId": 15,
+                "name": "Sipjeondaebo-tang",
+                "abbreviation": "SJDBT"
+            },
+            {
+                "perturId": 16,
+                "name": "LY294002",
+                "abbreviation": "LY294002"
+            },
+            {
+                "perturId": 17,
+                "name": "Thioridazine",
+                "abbreviation": "Thioridazine"
+            },
+            {
+                "perturId": 18,
+                "name": "Zingiberis Rhizoma Recens",
+                "abbreviation": "ZRR"
+            },
+            {
+                "perturId": 19,
+                "name": "Zingiberis Rhizoma",
+                "abbreviation": "ZR"
+            },
+            {
+                "perturId": 20,
+                "name": "Pinelliae Tuber",
+                "abbreviation": "PT"
+            },
+            {
+                "perturId": 21,
+                "name": "Scutellariae Radix",
+                "abbreviation": "SR"
+            },
+            {
+                "perturId": 22,
+                "name": "Coptidis Rhizoma",
+                "abbreviation": "CopR"
+            },
+            {
+                "perturId": 23,
+                "name": "Zizyphi Fructus",
+                "abbreviation": "ZF"
+            },
+            {
+                "perturId": 24,
+                "name": "Citri Unshius Pericarpium",
+                "abbreviation": "CUP"
+            },
+            {
+                "perturId": 25,
+                "name": "Cimicifugae Rhizoma",
+                "abbreviation": "CimR"
+            },
+            {
+                "perturId": 26,
+                "name": "Bupleuri Radix",
+                "abbreviation": "BR"
+            },
+            {
+                "perturId": 27,
+                "name": "Aconiti Lateralis Radix Preparata",
+                "abbreviation": "ALRR"
+            },
+            {
+                "perturId": 28,
+                "name": "Yijung-tang",
+                "abbreviation": "YJuT"
+            },
+            {
+                "perturId": 29,
+                "name": "Banhasasim-tang",
+                "abbreviation": "BHSST"
+            },
+            {
+                "perturId": 30,
+                "name": "Bojungikgi-tang",
+                "abbreviation": "BJIGT"
+            },
+            {
+                "perturId": 31,
+                "name": "Saeyeok-tang",
+                "abbreviation": "SNT"
+            },
+            {
+                "perturId": 32,
+                "name": "Longan Arillus",
+                "abbreviation": "LA"
+            },
+            {
+                "perturId": 33,
+                "name": "Zizyphi Semen",
+                "abbreviation": "ZS"
+            },
+            {
+                "perturId": 34,
+                "name": "Polygalae Radix",
+                "abbreviation": "PgR"
+            },
+            {
+                "perturId": 35,
+                "name": "Aucklandiae Radix",
+                "abbreviation": "AlR"
+            },
+            {
+                "perturId": 36,
+                "name": "Menthae Herba",
+                "abbreviation": "MH"
+            },
+            {
+                "perturId": 37,
+                "name": "Saposhnikoviae Radix",
+                "abbreviation": "SapR"
+            },
+            {
+                "perturId": 38,
+                "name": "Saengmaek-san",
+                "abbreviation": "SMS"
+            },
+            {
+                "perturId": 39,
+                "name": "Guibi-tang",
+                "abbreviation": "GBT"
+            },
+            {
+                "perturId": 40,
+                "name": "Soyo-san",
+                "abbreviation": "SYS"
+            },
+            {
+                "perturId": 41,
+                "name": "Okbyungpoongsan",
+                "abbreviation": "OBPS"
+            },
+            {
+                "perturId": 42,
+                "name": "Sosiho-tang",
+                "abbreviation": "SSHT"
+            },
+            {
+                "perturId": 43,
+                "name": "Yijin-tang",
+                "abbreviation": "YJiT"
+            },
+            {
+                "perturId": 44,
+                "name": "Liriopis seu Ophiopogonis Tuber",
+                "abbreviation": "LOT"
+            },
+            {
+                "perturId": 45,
+                "name": "Schisandrae Fructus",
+                "abbreviation": "SF"
+            }
+        ],
+        "candidateCaseData": [],
+        "selectCaseData": [
+            {
+                "cvcId": 2,
+                "controlId": 1,
+                "caseId": 2,
+                "label": "SGJT-E(H)-A549"
+            },
+            {
+                "cvcId": 36,
+                "controlId": 1,
+                "caseId": 40,
+                "label": "SGJT-W(H)-A549"
+            },
+            {
+                "cvcId": 37,
+                "controlId": 1,
+                "caseId": 41,
+                "label": "SGJT-W(M)-A549"
+            },
+            {
+                "cvcId": 38,
+                "controlId": 1,
+                "caseId": 42,
+                "label": "SGJT-W(L)-A549"
+            },
+            {
+                "cvcId": 78,
+                "controlId": 1,
+                "caseId": 82,
+                "label": "SGJT-E(M)-A549"
+            },
+            {
+                "cvcId": 79,
+                "controlId": 1,
+                "caseId": 83,
+                "label": "SGJT-E(L)-A549"
+            }
+        ]
+    },
+    "pathwayDBIds": [
+        "1",
+        "2",
+        "3"
+    ],
+    "topN": "",
+    "hPadj": 0.01,
+    "hValueVersion": "NES",
+    "hPathway": "Union",
+    "hRowOrder": "Cluster",
+    "hMatrixValues": [
+        "5"
+    ],
+    "hPathwayName": null,
+    "bCvcId": null,
+    "bPadj": 0.01,
+    "bValueVersion": null,
+    "bValueRange": null,
+    "bRowOrder": null,
+    "bMatrixValues": [
+        ""
+    ],
+    "hPlotData": {
+        "heatmap": {
+            "rowCluster": "{\"name\": \"Root\", \"children\": [{\"children\": [{\"children\": [{\"children\": [{\"children\": [], \"name\": \"2\"}, {\"children\": [], \"name\": \"10\"}], \"name\": \"10-2\"}, {\"children\": [{\"children\": [], \"name\": \"6\"}, {\"children\": [{\"children\": [], \"name\": \"0\"}, {\"children\": [], \"name\": \"7\"}], \"name\": \"0-7\"}], \"name\": \"0-6-7\"}], \"name\": \"0-10-2-6-7\"}, {\"children\": [{\"children\": [{\"children\": [], \"name\": \"1\"}, {\"children\": [], \"name\": \"5\"}], \"name\": \"1-5\"}, {\"children\": [{\"children\": [], \"name\": \"11\"}, {\"children\": [{\"children\": [{\"children\": [], \"name\": \"9\"}, {\"children\": [{\"children\": [], \"name\": \"16\"}, {\"children\": [{\"children\": [], \"name\": \"12\"}, {\"children\": [{\"children\": [], \"name\": \"14\"}, {\"children\": [], \"name\": \"17\"}], \"name\": \"14-17\"}], \"name\": \"12-14-17\"}], \"name\": \"12-14-16-17\"}], \"name\": \"12-14-16-17-9\"}, {\"children\": [{\"children\": [{\"children\": [], \"name\": \"15\"}, {\"children\": [{\"children\": [], \"name\": \"3\"}, {\"children\": [], \"name\": \"4\"}], \"name\": \"3-4\"}], \"name\": \"15-3-4\"}, {\"children\": [{\"children\": [], \"name\": \"8\"}, {\"children\": [], \"name\": \"13\"}], \"name\": \"13-8\"}], \"name\": \"13-15-3-4-8\"}], \"name\": \"12-13-14-15-16-17-3-4-8-9\"}], \"name\": \"11-12-13-14-15-16-17-3-4-8-9\"}], \"name\": \"1-11-12-13-14-15-16-17-3-4-5-8-9\"}], \"name\": \"0-1-10-11-12-13-14-15-16-17-2-3-4-5-6-7-8-9\"}]}",
+            "colCluster": "{\"name\": \"Root\", \"children\": [{\"children\": [{\"children\": [{\"children\": [], \"name\": \"3\"}, {\"children\": [{\"children\": [], \"name\": \"4\"}, {\"children\": [], \"name\": \"5\"}], \"name\": \"4-5\"}], \"name\": \"3-4-5\"}, {\"children\": [{\"children\": [], \"name\": \"0\"}, {\"children\": [{\"children\": [], \"name\": \"1\"}, {\"children\": [], \"name\": \"2\"}], \"name\": \"1-2\"}], \"name\": \"0-1-2\"}], \"name\": \"0-1-2-3-4-5\"}]}",
+            "matrix": [
+                [
+                    -1.236,
+                    -1.679,
+                    -1.515,
+                    -1.837,
+                    -1.521,
+                    -1.313
+                ],
+                [
+                    -1.053,
+                    -1.562,
+                    -1.446,
+                    -1.807,
+                    -1.27,
+                    -1.069
+                ],
+                [
+                    -2.101,
+                    -2.097,
+                    -2.181,
+                    -1.782,
+                    -1.579,
+                    -1.836
+                ],
+                [
+                    -1.913,
+                    -1.937,
+                    -1.849,
+                    -1.931,
+                    -2.098,
+                    -1.973
+                ],
+                [
+                    -1.59,
+                    -1.714,
+                    -1.675,
+                    -1.712,
+                    -1.821,
+                    -1.739
+                ],
+                [
+                    -1.322,
+                    -1.146,
+                    -1.451,
+                    1.738,
+                    1.587,
+                    1.144
+                ],
+                [
+                    -1.06,
+                    -1.068,
+                    -1.303,
+                    1.73,
+                    1.834,
+                    1.434
+                ],
+                [
+                    2.063,
+                    1.25,
+                    1.75,
+                    -1.361,
+                    1.286,
+                    1.946
+                ],
+                [
+                    2.267,
+                    2.206,
+                    2.256,
+                    2.061,
+                    2.091,
+                    2.152
+                ],
+                [
+                    1.979,
+                    1.822,
+                    1.685,
+                    2.1,
+                    1.954,
+                    1.902
+                ],
+                [
+                    1.98,
+                    2.069,
+                    1.915,
+                    2.098,
+                    1.927,
+                    1.84
+                ],
+                [
+                    2.066,
+                    2.003,
+                    1.96,
+                    2.016,
+                    2.051,
+                    1.954
+                ],
+                [
+                    2.017,
+                    2.126,
+                    1.931,
+                    2.096,
+                    2.047,
+                    1.958
+                ],
+                [
+                    1.695,
+                    1.858,
+                    1.751,
+                    2.17,
+                    1.62,
+                    1.566
+                ],
+                [
+                    1.748,
+                    1.74,
+                    1.66,
+                    1.904,
+                    1.823,
+                    1.735
+                ],
+                [
+                    1.736,
+                    1.549,
+                    1.494,
+                    2.176,
+                    1.84,
+                    1.725
+                ],
+                [
+                    1.499,
+                    1.212,
+                    1.137,
+                    1.425,
+                    1.602,
+                    1.564
+                ],
+                [
+                    1.543,
+                    1.551,
+                    1.329,
+                    1.78,
+                    1.766,
+                    1.624
+                ]
+            ]
+        },
+        "rowClusterName": [
+            "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+            "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
+            "HALLMARK_MYC_TARGETS_V2",
+            "HALLMARK_APICAL_JUNCTION",
+            "HALLMARK_MYOGENESIS",
+            "HALLMARK_E2F_TARGETS",
+            "HALLMARK_MYC_TARGETS_V1",
+            "KEGG_COMPLEMENT_AND_COAGULATION_CASCADES",
+            "HALLMARK_PROTEIN_SECRETION",
+            "KEGG_TRYPTOPHAN_METABOLISM",
+            "KEGG_FATTY_ACID_METABOLISM",
+            "KEGG_PROPANOATE_METABOLISM",
+            "KEGG_VALINE_LEUCINE_AND_ISOLEUCINE_DEGRADATION",
+            "KEGG_STEROID_HORMONE_BIOSYNTHESIS",
+            "HALLMARK_FATTY_ACID_METABOLISM",
+            "HALLMARK_MTORC1_SIGNALING",
+            "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+            "KEGG_OOCYTE_MEIOSIS"
+        ],
+        "colClusterName": [
+            "SGJT-W(L)-A549",
+            "SGJT-E(M)-A549",
+            "SGJT-E(L)-A549",
+            "SGJT-E(H)-A549",
+            "SGJT-W(H)-A549",
+            "SGJT-W(M)-A549"
+        ],
+        "heatmapInfo": [
+            [
+                {
+                    "cvc_id": 38,
+                    "cvc_name": "SGJT-W(L)-A549",
+                    "path_id": 187,
+                    "gs_name": "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.387,
+                    "es": -0.305,
+                    "nes": -1.236,
+                    "gene_ratio": 0.258,
+                    "count": 50,
+                    "score": -0.509589247236625,
+                    "value": -1.236
+                },
+                {
+                    "cvc_id": 78,
+                    "cvc_name": "SGJT-E(M)-A549",
+                    "path_id": 187,
+                    "gs_name": "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.011,
+                    "es": -0.418,
+                    "nes": -1.679,
+                    "gene_ratio": 0.389,
+                    "count": 75,
+                    "score": -3.28850168161934,
+                    "value": -1.679
+                },
+                {
+                    "cvc_id": 79,
+                    "cvc_name": "SGJT-E(L)-A549",
+                    "path_id": 187,
+                    "gs_name": "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.049,
+                    "es": -0.387,
+                    "nes": -1.515,
+                    "gene_ratio": 0.278,
+                    "count": 54,
+                    "score": -1.9843529387568,
+                    "value": -1.515
+                },
+                {
+                    "cvc_id": 2,
+                    "cvc_name": "SGJT-E(H)-A549",
+                    "path_id": 187,
+                    "gs_name": "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.002,
+                    "es": -0.463,
+                    "nes": -1.837,
+                    "gene_ratio": 0.418,
+                    "count": 81,
+                    "score": -4.95800789796527,
+                    "value": -1.837
+                },
+                {
+                    "cvc_id": 36,
+                    "cvc_name": "SGJT-W(H)-A549",
+                    "path_id": 187,
+                    "gs_name": "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.04,
+                    "es": -0.409,
+                    "nes": -1.521,
+                    "gene_ratio": 0.371,
+                    "count": 72,
+                    "score": -2.12626675319017,
+                    "value": -1.521
+                },
+                {
+                    "cvc_id": 37,
+                    "cvc_name": "SGJT-W(M)-A549",
+                    "path_id": 187,
+                    "gs_name": "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.27,
+                    "es": -0.351,
+                    "nes": -1.313,
+                    "gene_ratio": 0.309,
+                    "count": 60,
+                    "score": -0.74661937765925,
+                    "value": -1.313
+                }
+            ],
+            [
+                {
+                    "cvc_id": 38,
+                    "cvc_name": "SGJT-W(L)-A549",
+                    "path_id": 218,
+                    "gs_name": "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.67,
+                    "es": -0.26,
+                    "nes": -1.053,
+                    "gene_ratio": 0.244,
+                    "count": 48,
+                    "score": -0.18314323275603,
+                    "value": -1.053
+                },
+                {
+                    "cvc_id": 78,
+                    "cvc_name": "SGJT-E(M)-A549",
+                    "path_id": 218,
+                    "gs_name": "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.034,
+                    "es": -0.388,
+                    "nes": -1.562,
+                    "gene_ratio": 0.279,
+                    "count": 55,
+                    "score": -2.29382993158,
+                    "value": -1.562
+                },
+                {
+                    "cvc_id": 79,
+                    "cvc_name": "SGJT-E(L)-A549",
+                    "path_id": 218,
+                    "gs_name": "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.102,
+                    "es": -0.369,
+                    "nes": -1.446,
+                    "gene_ratio": 0.276,
+                    "count": 54,
+                    "score": -1.43356415163227,
+                    "value": -1.446
+                },
+                {
+                    "cvc_id": 2,
+                    "cvc_name": "SGJT-E(H)-A549",
+                    "path_id": 218,
+                    "gs_name": "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.002,
+                    "es": -0.455,
+                    "nes": -1.807,
+                    "gene_ratio": 0.388,
+                    "count": 76,
+                    "score": -4.87703879783519,
+                    "value": -1.807
+                },
+                {
+                    "cvc_id": 36,
+                    "cvc_name": "SGJT-W(H)-A549",
+                    "path_id": 218,
+                    "gs_name": "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.282,
+                    "es": -0.341,
+                    "nes": -1.27,
+                    "gene_ratio": 0.27,
+                    "count": 53,
+                    "score": -0.698183632434412,
+                    "value": -1.27
+                },
+                {
+                    "cvc_id": 37,
+                    "cvc_name": "SGJT-W(M)-A549",
+                    "path_id": 218,
+                    "gs_name": "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.634,
+                    "es": -0.286,
+                    "nes": -1.069,
+                    "gene_ratio": 0.214,
+                    "count": 42,
+                    "score": -0.211566583324428,
+                    "value": -1.069
+                }
+            ],
+            [
+                {
+                    "cvc_id": 38,
+                    "cvc_name": "SGJT-W(L)-A549",
+                    "path_id": 206,
+                    "gs_name": "HALLMARK_MYC_TARGETS_V2",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.008,
+                    "es": -0.618,
+                    "nes": -2.101,
+                    "gene_ratio": 0.466,
+                    "count": 27,
+                    "score": -4.40560793732993,
+                    "value": -2.101
+                },
+                {
+                    "cvc_id": 78,
+                    "cvc_name": "SGJT-E(M)-A549",
+                    "path_id": 206,
+                    "gs_name": "HALLMARK_MYC_TARGETS_V2",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.011,
+                    "es": -0.621,
+                    "nes": -2.097,
+                    "gene_ratio": 0.638,
+                    "count": 37,
+                    "score": -4.1071995392232,
+                    "value": -2.097
+                },
+                {
+                    "cvc_id": 79,
+                    "cvc_name": "SGJT-E(L)-A549",
+                    "path_id": 206,
+                    "gs_name": "HALLMARK_MYC_TARGETS_V2",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.011,
+                    "es": -0.66,
+                    "nes": -2.181,
+                    "gene_ratio": 0.517,
+                    "count": 30,
+                    "score": -4.27172255366991,
+                    "value": -2.181
+                },
+                {
+                    "cvc_id": 2,
+                    "cvc_name": "SGJT-E(H)-A549",
+                    "path_id": 206,
+                    "gs_name": "HALLMARK_MYC_TARGETS_V2",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.012,
+                    "es": -0.532,
+                    "nes": -1.782,
+                    "gene_ratio": 0.466,
+                    "count": 27,
+                    "score": -3.42289901954313,
+                    "value": -1.782
+                },
+                {
+                    "cvc_id": 36,
+                    "cvc_name": "SGJT-W(H)-A549",
+                    "path_id": 206,
+                    "gs_name": "HALLMARK_MYC_TARGETS_V2",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.117,
+                    "es": -0.499,
+                    "nes": -1.579,
+                    "gene_ratio": 0.414,
+                    "count": 24,
+                    "score": -1.47133452430281,
+                    "value": -1.579
+                },
+                {
+                    "cvc_id": 37,
+                    "cvc_name": "SGJT-W(M)-A549",
+                    "path_id": 206,
+                    "gs_name": "HALLMARK_MYC_TARGETS_V2",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.029,
+                    "es": -0.578,
+                    "nes": -1.836,
+                    "gene_ratio": 0.534,
+                    "count": 31,
+                    "score": -2.82303727585752,
+                    "value": -1.836
+                }
+            ],
+            [
+                {
+                    "cvc_id": 38,
+                    "cvc_name": "SGJT-W(L)-A549",
+                    "path_id": 178,
+                    "gs_name": "HALLMARK_APICAL_JUNCTION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.008,
+                    "es": -0.473,
+                    "nes": -1.913,
+                    "gene_ratio": 0.401,
+                    "count": 77,
+                    "score": -4.01138885488441,
+                    "value": -1.913
+                },
+                {
+                    "cvc_id": 78,
+                    "cvc_name": "SGJT-E(M)-A549",
+                    "path_id": 178,
+                    "gs_name": "HALLMARK_APICAL_JUNCTION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.01,
+                    "es": -0.483,
+                    "nes": -1.937,
+                    "gene_ratio": 0.307,
+                    "count": 59,
+                    "score": -3.874,
+                    "value": -1.937
+                },
+                {
+                    "cvc_id": 79,
+                    "cvc_name": "SGJT-E(L)-A549",
+                    "path_id": 178,
+                    "gs_name": "HALLMARK_APICAL_JUNCTION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.011,
+                    "es": -0.473,
+                    "nes": -1.849,
+                    "gene_ratio": 0.344,
+                    "count": 66,
+                    "score": -3.62146492514244,
+                    "value": -1.849
+                },
+                {
+                    "cvc_id": 2,
+                    "cvc_name": "SGJT-E(H)-A549",
+                    "path_id": 178,
+                    "gs_name": "HALLMARK_APICAL_JUNCTION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.002,
+                    "es": -0.487,
+                    "nes": -1.931,
+                    "gene_ratio": 0.333,
+                    "count": 64,
+                    "score": -5.21171107837285,
+                    "value": -1.931
+                },
+                {
+                    "cvc_id": 36,
+                    "cvc_name": "SGJT-W(H)-A549",
+                    "path_id": 178,
+                    "gs_name": "HALLMARK_APICAL_JUNCTION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.006,
+                    "es": -0.565,
+                    "nes": -2.098,
+                    "gene_ratio": 0.328,
+                    "count": 63,
+                    "score": -4.66143867669511,
+                    "value": -2.098
+                },
+                {
+                    "cvc_id": 37,
+                    "cvc_name": "SGJT-W(M)-A549",
+                    "path_id": 178,
+                    "gs_name": "HALLMARK_APICAL_JUNCTION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.009,
+                    "es": -0.528,
+                    "nes": -1.973,
+                    "gene_ratio": 0.297,
+                    "count": 57,
+                    "score": -4.03627952887621,
+                    "value": -1.973
+                }
+            ],
+            [
+                {
+                    "cvc_id": 38,
+                    "cvc_name": "SGJT-W(L)-A549",
+                    "path_id": 207,
+                    "gs_name": "HALLMARK_MYOGENESIS",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.027,
+                    "es": -0.396,
+                    "nes": -1.59,
+                    "gene_ratio": 0.28,
+                    "count": 51,
+                    "score": -2.49413161498721,
+                    "value": -1.59
+                },
+                {
+                    "cvc_id": 78,
+                    "cvc_name": "SGJT-E(M)-A549",
+                    "path_id": 207,
+                    "gs_name": "HALLMARK_MYOGENESIS",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.012,
+                    "es": -0.43,
+                    "nes": -1.714,
+                    "gene_ratio": 0.291,
+                    "count": 53,
+                    "score": -3.29228334427437,
+                    "value": -1.714
+                },
+                {
+                    "cvc_id": 79,
+                    "cvc_name": "SGJT-E(L)-A549",
+                    "path_id": 207,
+                    "gs_name": "HALLMARK_MYOGENESIS",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.014,
+                    "es": -0.43,
+                    "nes": -1.675,
+                    "gene_ratio": 0.308,
+                    "count": 56,
+                    "score": -3.10523554023895,
+                    "value": -1.675
+                },
+                {
+                    "cvc_id": 2,
+                    "cvc_name": "SGJT-E(H)-A549",
+                    "path_id": 207,
+                    "gs_name": "HALLMARK_MYOGENESIS",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.003,
+                    "es": -0.435,
+                    "nes": -1.712,
+                    "gene_ratio": 0.287,
+                    "count": 52,
+                    "score": -4.31916841191994,
+                    "value": -1.712
+                },
+                {
+                    "cvc_id": 36,
+                    "cvc_name": "SGJT-W(H)-A549",
+                    "path_id": 207,
+                    "gs_name": "HALLMARK_MYOGENESIS",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.006,
+                    "es": -0.494,
+                    "nes": -1.821,
+                    "gene_ratio": 0.298,
+                    "count": 54,
+                    "score": -4.04598657305138,
+                    "value": -1.821
+                },
+                {
+                    "cvc_id": 37,
+                    "cvc_name": "SGJT-W(M)-A549",
+                    "path_id": 207,
+                    "gs_name": "HALLMARK_MYOGENESIS",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.009,
+                    "es": -0.468,
+                    "nes": -1.739,
+                    "gene_ratio": 0.279,
+                    "count": 51,
+                    "score": -3.55757227608501,
+                    "value": -1.739
+                }
+            ],
+            [
+                {
+                    "cvc_id": 38,
+                    "cvc_name": "SGJT-W(L)-A549",
+                    "path_id": 186,
+                    "gs_name": "HALLMARK_E2F_TARGETS",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.247,
+                    "es": -0.326,
+                    "nes": -1.322,
+                    "gene_ratio": 0.277,
+                    "count": 54,
+                    "score": -0.802854627790722,
+                    "value": -1.322
+                },
+                {
+                    "cvc_id": 78,
+                    "cvc_name": "SGJT-E(M)-A549",
+                    "path_id": 186,
+                    "gs_name": "HALLMARK_E2F_TARGETS",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.539,
+                    "es": -0.285,
+                    "nes": -1.146,
+                    "gene_ratio": 0.359,
+                    "count": 70,
+                    "score": -0.307599275095997,
+                    "value": -1.146
+                },
+                {
+                    "cvc_id": 79,
+                    "cvc_name": "SGJT-E(L)-A549",
+                    "path_id": 186,
+                    "gs_name": "HALLMARK_E2F_TARGETS",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.098,
+                    "es": -0.37,
+                    "nes": -1.451,
+                    "gene_ratio": 0.333,
+                    "count": 65,
+                    "score": -1.46373096417019,
+                    "value": -1.451
+                },
+                {
+                    "cvc_id": 2,
+                    "cvc_name": "SGJT-E(H)-A549",
+                    "path_id": 186,
+                    "gs_name": "HALLMARK_E2F_TARGETS",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.002,
+                    "es": 0.418,
+                    "nes": 1.738,
+                    "gene_ratio": 0.487,
+                    "count": 95,
+                    "score": 4.690809867536,
+                    "value": 1.738
+                },
+                {
+                    "cvc_id": 36,
+                    "cvc_name": "SGJT-W(H)-A549",
+                    "path_id": 186,
+                    "gs_name": "HALLMARK_E2F_TARGETS",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.009,
+                    "es": 0.394,
+                    "nes": 1.587,
+                    "gene_ratio": 0.503,
+                    "count": 98,
+                    "score": 3.24661713751979,
+                    "value": 1.587
+                },
+                {
+                    "cvc_id": 37,
+                    "cvc_name": "SGJT-W(M)-A549",
+                    "path_id": 186,
+                    "gs_name": "HALLMARK_E2F_TARGETS",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.473,
+                    "es": 0.287,
+                    "nes": 1.144,
+                    "gene_ratio": 0.287,
+                    "count": 56,
+                    "score": 0.371958854995944,
+                    "value": 1.144
+                }
+            ],
+            [
+                {
+                    "cvc_id": 38,
+                    "cvc_name": "SGJT-W(L)-A549",
+                    "path_id": 205,
+                    "gs_name": "HALLMARK_MYC_TARGETS_V1",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.662,
+                    "es": -0.262,
+                    "nes": -1.06,
+                    "gene_ratio": 0.247,
+                    "count": 48,
+                    "score": -0.189890531193918,
+                    "value": -1.06
+                },
+                {
+                    "cvc_id": 78,
+                    "cvc_name": "SGJT-E(M)-A549",
+                    "path_id": 205,
+                    "gs_name": "HALLMARK_MYC_TARGETS_V1",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.655,
+                    "es": -0.266,
+                    "nes": -1.068,
+                    "gene_ratio": 0.258,
+                    "count": 50,
+                    "score": -0.196254291608776,
+                    "value": -1.068
+                },
+                {
+                    "cvc_id": 79,
+                    "cvc_name": "SGJT-E(L)-A549",
+                    "path_id": 205,
+                    "gs_name": "HALLMARK_MYC_TARGETS_V1",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.274,
+                    "es": -0.332,
+                    "nes": -1.303,
+                    "gene_ratio": 0.289,
+                    "count": 56,
+                    "score": -0.732611016645034,
+                    "value": -1.303
+                },
+                {
+                    "cvc_id": 2,
+                    "cvc_name": "SGJT-E(H)-A549",
+                    "path_id": 205,
+                    "gs_name": "HALLMARK_MYC_TARGETS_V1",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.002,
+                    "es": 0.416,
+                    "nes": 1.73,
+                    "gene_ratio": 0.464,
+                    "count": 90,
+                    "score": 4.66921810750131,
+                    "value": 1.73
+                },
+                {
+                    "cvc_id": 36,
+                    "cvc_name": "SGJT-W(H)-A549",
+                    "path_id": 205,
+                    "gs_name": "HALLMARK_MYC_TARGETS_V1",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.007,
+                    "es": 0.455,
+                    "nes": 1.834,
+                    "gene_ratio": 0.479,
+                    "count": 93,
+                    "score": 3.95209019461385,
+                    "value": 1.834
+                },
+                {
+                    "cvc_id": 37,
+                    "cvc_name": "SGJT-W(M)-A549",
+                    "path_id": 205,
+                    "gs_name": "HALLMARK_MYC_TARGETS_V1",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.103,
+                    "es": 0.36,
+                    "nes": 1.434,
+                    "gene_ratio": 0.345,
+                    "count": 67,
+                    "score": 1.41559141977278,
+                    "value": 1.434
+                }
+            ],
+            [
+                {
+                    "cvc_id": 38,
+                    "cvc_name": "SGJT-W(L)-A549",
+                    "path_id": 252,
+                    "gs_name": "KEGG_COMPLEMENT_AND_COAGULATION_CASCADES",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.008,
+                    "es": 0.591,
+                    "nes": 2.063,
+                    "gene_ratio": 0.213,
+                    "count": 13,
+                    "score": 4.32592535683562,
+                    "value": 2.063
+                },
+                {
+                    "cvc_id": 78,
+                    "cvc_name": "SGJT-E(M)-A549",
+                    "path_id": 252,
+                    "gs_name": "KEGG_COMPLEMENT_AND_COAGULATION_CASCADES",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.496,
+                    "es": 0.359,
+                    "nes": 1.25,
+                    "gene_ratio": 0.2,
+                    "count": 12,
+                    "score": 0.380647904387253,
+                    "value": 1.25
+                },
+                {
+                    "cvc_id": 79,
+                    "cvc_name": "SGJT-E(L)-A549",
+                    "path_id": 252,
+                    "gs_name": "KEGG_COMPLEMENT_AND_COAGULATION_CASCADES",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.051,
+                    "es": 0.507,
+                    "nes": 1.75,
+                    "gene_ratio": 0.233,
+                    "count": 14,
+                    "score": 2.26175219182861,
+                    "value": 1.75
+                },
+                {
+                    "cvc_id": 2,
+                    "cvc_name": "SGJT-E(H)-A549",
+                    "path_id": 252,
+                    "gs_name": "KEGG_COMPLEMENT_AND_COAGULATION_CASCADES",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.241,
+                    "es": -0.403,
+                    "nes": -1.361,
+                    "gene_ratio": 0.213,
+                    "count": 13,
+                    "score": -0.841074805055604,
+                    "value": -1.361
+                },
+                {
+                    "cvc_id": 36,
+                    "cvc_name": "SGJT-W(H)-A549",
+                    "path_id": 252,
+                    "gs_name": "KEGG_COMPLEMENT_AND_COAGULATION_CASCADES",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.353,
+                    "es": 0.377,
+                    "nes": 1.286,
+                    "gene_ratio": 0.197,
+                    "count": 12,
+                    "score": 0.58156172887126,
+                    "value": 1.286
+                },
+                {
+                    "cvc_id": 37,
+                    "cvc_name": "SGJT-W(M)-A549",
+                    "path_id": 252,
+                    "gs_name": "KEGG_COMPLEMENT_AND_COAGULATION_CASCADES",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.01,
+                    "es": 0.577,
+                    "nes": 1.946,
+                    "gene_ratio": 0.213,
+                    "count": 13,
+                    "score": 3.892,
+                    "value": 1.946
+                }
+            ],
+            [
+                {
+                    "cvc_id": 38,
+                    "cvc_name": "SGJT-W(L)-A549",
+                    "path_id": 214,
+                    "gs_name": "HALLMARK_PROTEIN_SECRETION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.008,
+                    "es": 0.604,
+                    "nes": 2.267,
+                    "gene_ratio": 0.653,
+                    "count": 62,
+                    "score": 4.75369499948926,
+                    "value": 2.267
+                },
+                {
+                    "cvc_id": 78,
+                    "cvc_name": "SGJT-E(M)-A549",
+                    "path_id": 214,
+                    "gs_name": "HALLMARK_PROTEIN_SECRETION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.01,
+                    "es": 0.587,
+                    "nes": 2.206,
+                    "gene_ratio": 0.653,
+                    "count": 62,
+                    "score": 4.412,
+                    "value": 2.206
+                },
+                {
+                    "cvc_id": 79,
+                    "cvc_name": "SGJT-E(L)-A549",
+                    "path_id": 214,
+                    "gs_name": "HALLMARK_PROTEIN_SECRETION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.011,
+                    "es": 0.605,
+                    "nes": 2.256,
+                    "gene_ratio": 0.642,
+                    "count": 61,
+                    "score": 4.41861810228304,
+                    "value": 2.256
+                },
+                {
+                    "cvc_id": 2,
+                    "cvc_name": "SGJT-E(H)-A549",
+                    "path_id": 214,
+                    "gs_name": "HALLMARK_PROTEIN_SECRETION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.002,
+                    "es": 0.545,
+                    "nes": 2.061,
+                    "gene_ratio": 0.589,
+                    "count": 56,
+                    "score": 5.56257717893653,
+                    "value": 2.061
+                },
+                {
+                    "cvc_id": 36,
+                    "cvc_name": "SGJT-W(H)-A549",
+                    "path_id": 214,
+                    "gs_name": "HALLMARK_PROTEIN_SECRETION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.007,
+                    "es": 0.569,
+                    "nes": 2.091,
+                    "gene_ratio": 0.674,
+                    "count": 64,
+                    "score": 4.50589999833019,
+                    "value": 2.091
+                },
+                {
+                    "cvc_id": 37,
+                    "cvc_name": "SGJT-W(M)-A549",
+                    "path_id": 214,
+                    "gs_name": "HALLMARK_PROTEIN_SECRETION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.01,
+                    "es": 0.593,
+                    "nes": 2.152,
+                    "gene_ratio": 0.558,
+                    "count": 53,
+                    "score": 4.304,
+                    "value": 2.152
+                }
+            ],
+            [
+                {
+                    "cvc_id": 38,
+                    "cvc_name": "SGJT-W(L)-A549",
+                    "path_id": 358,
+                    "gs_name": "KEGG_TRYPTOPHAN_METABOLISM",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.015,
+                    "es": 0.621,
+                    "nes": 1.979,
+                    "gene_ratio": 0.421,
+                    "count": 16,
+                    "score": 3.60951539832881,
+                    "value": 1.979
+                },
+                {
+                    "cvc_id": 78,
+                    "cvc_name": "SGJT-E(M)-A549",
+                    "path_id": 358,
+                    "gs_name": "KEGG_TRYPTOPHAN_METABOLISM",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.064,
+                    "es": 0.572,
+                    "nes": 1.822,
+                    "gene_ratio": 0.342,
+                    "count": 13,
+                    "score": 2.17514008740136,
+                    "value": 1.822
+                },
+                {
+                    "cvc_id": 79,
+                    "cvc_name": "SGJT-E(L)-A549",
+                    "path_id": 358,
+                    "gs_name": "KEGG_TRYPTOPHAN_METABOLISM",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.119,
+                    "es": 0.533,
+                    "nes": 1.685,
+                    "gene_ratio": 0.474,
+                    "count": 18,
+                    "score": 1.55770337005359,
+                    "value": 1.685
+                },
+                {
+                    "cvc_id": 2,
+                    "cvc_name": "SGJT-E(H)-A549",
+                    "path_id": 358,
+                    "gs_name": "KEGG_TRYPTOPHAN_METABOLISM",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.003,
+                    "es": 0.658,
+                    "nes": 2.1,
+                    "gene_ratio": 0.368,
+                    "count": 14,
+                    "score": 5.29804536508871,
+                    "value": 2.1
+                },
+                {
+                    "cvc_id": 36,
+                    "cvc_name": "SGJT-W(H)-A549",
+                    "path_id": 358,
+                    "gs_name": "KEGG_TRYPTOPHAN_METABOLISM",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.008,
+                    "es": 0.628,
+                    "nes": 1.954,
+                    "gene_ratio": 0.342,
+                    "count": 13,
+                    "score": 4.09736216541774,
+                    "value": 1.954
+                },
+                {
+                    "cvc_id": 37,
+                    "cvc_name": "SGJT-W(M)-A549",
+                    "path_id": 358,
+                    "gs_name": "KEGG_TRYPTOPHAN_METABOLISM",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.041,
+                    "es": 0.618,
+                    "nes": 1.902,
+                    "gene_ratio": 0.474,
+                    "count": 18,
+                    "score": 2.63848510451906,
+                    "value": 1.902
+                }
+            ],
+            [
+                {
+                    "cvc_id": 38,
+                    "cvc_name": "SGJT-W(L)-A549",
+                    "path_id": 265,
+                    "gs_name": "KEGG_FATTY_ACID_METABOLISM",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.017,
+                    "es": 0.612,
+                    "nes": 1.98,
+                    "gene_ratio": 0.488,
+                    "count": 20,
+                    "score": 3.50371113567102,
+                    "value": 1.98
+                },
+                {
+                    "cvc_id": 78,
+                    "cvc_name": "SGJT-E(M)-A549",
+                    "path_id": 265,
+                    "gs_name": "KEGG_FATTY_ACID_METABOLISM",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.01,
+                    "es": 0.64,
+                    "nes": 2.069,
+                    "gene_ratio": 0.463,
+                    "count": 19,
+                    "score": 4.138,
+                    "value": 2.069
+                },
+                {
+                    "cvc_id": 79,
+                    "cvc_name": "SGJT-E(L)-A549",
+                    "path_id": 265,
+                    "gs_name": "KEGG_FATTY_ACID_METABOLISM",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.031,
+                    "es": 0.596,
+                    "nes": 1.915,
+                    "gene_ratio": 0.463,
+                    "count": 19,
+                    "score": 2.88904235630737,
+                    "value": 1.915
+                },
+                {
+                    "cvc_id": 2,
+                    "cvc_name": "SGJT-E(H)-A549",
+                    "path_id": 265,
+                    "gs_name": "KEGG_FATTY_ACID_METABOLISM",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.002,
+                    "es": 0.647,
+                    "nes": 2.098,
+                    "gene_ratio": 0.463,
+                    "count": 19,
+                    "score": 5.66243906909697,
+                    "value": 2.098
+                },
+                {
+                    "cvc_id": 36,
+                    "cvc_name": "SGJT-W(H)-A549",
+                    "path_id": 265,
+                    "gs_name": "KEGG_FATTY_ACID_METABOLISM",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.013,
+                    "es": 0.61,
+                    "nes": 1.927,
+                    "gene_ratio": 0.488,
+                    "count": 20,
+                    "score": 3.63443116010473,
+                    "value": 1.927
+                },
+                {
+                    "cvc_id": 37,
+                    "cvc_name": "SGJT-W(M)-A549",
+                    "path_id": 265,
+                    "gs_name": "KEGG_FATTY_ACID_METABOLISM",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.054,
+                    "es": 0.589,
+                    "nes": 1.84,
+                    "gene_ratio": 0.512,
+                    "count": 21,
+                    "score": 2.33239548192574,
+                    "value": 1.84
+                }
+            ],
+            [
+                {
+                    "cvc_id": 38,
+                    "cvc_name": "SGJT-W(L)-A549",
+                    "path_id": 333,
+                    "gs_name": "KEGG_PROPANOATE_METABOLISM",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.011,
+                    "es": 0.678,
+                    "nes": 2.066,
+                    "gene_ratio": 0.516,
+                    "count": 16,
+                    "score": 4.04648271246311,
+                    "value": 2.066
+                },
+                {
+                    "cvc_id": 78,
+                    "cvc_name": "SGJT-E(M)-A549",
+                    "path_id": 333,
+                    "gs_name": "KEGG_PROPANOATE_METABOLISM",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.024,
+                    "es": 0.658,
+                    "nes": 2.003,
+                    "gene_ratio": 0.613,
+                    "count": 19,
+                    "score": 3.24443688285165,
+                    "value": 2.003
+                },
+                {
+                    "cvc_id": 79,
+                    "cvc_name": "SGJT-E(L)-A549",
+                    "path_id": 333,
+                    "gs_name": "KEGG_PROPANOATE_METABOLISM",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.021,
+                    "es": 0.648,
+                    "nes": 1.96,
+                    "gene_ratio": 0.548,
+                    "count": 17,
+                    "score": 3.28845018232152,
+                    "value": 1.96
+                },
+                {
+                    "cvc_id": 2,
+                    "cvc_name": "SGJT-E(H)-A549",
+                    "path_id": 333,
+                    "gs_name": "KEGG_PROPANOATE_METABOLISM",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.004,
+                    "es": 0.66,
+                    "nes": 2.016,
+                    "gene_ratio": 0.548,
+                    "count": 17,
+                    "score": 4.83424705748283,
+                    "value": 2.016
+                },
+                {
+                    "cvc_id": 36,
+                    "cvc_name": "SGJT-W(H)-A549",
+                    "path_id": 333,
+                    "gs_name": "KEGG_PROPANOATE_METABOLISM",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.007,
+                    "es": 0.69,
+                    "nes": 2.051,
+                    "gene_ratio": 0.484,
+                    "count": 15,
+                    "score": 4.41970391993076,
+                    "value": 2.051
+                },
+                {
+                    "cvc_id": 37,
+                    "cvc_name": "SGJT-W(M)-A549",
+                    "path_id": 333,
+                    "gs_name": "KEGG_PROPANOATE_METABOLISM",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.035,
+                    "es": 0.663,
+                    "nes": 1.954,
+                    "gene_ratio": 0.548,
+                    "count": 17,
+                    "score": 2.84489104133956,
+                    "value": 1.954
+                }
+            ],
+            [
+                {
+                    "cvc_id": 38,
+                    "cvc_name": "SGJT-W(L)-A549",
+                    "path_id": 365,
+                    "gs_name": "KEGG_VALINE_LEUCINE_AND_ISOLEUCINE_DEGRADATION",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.015,
+                    "es": 0.618,
+                    "nes": 2.017,
+                    "gene_ratio": 0.581,
+                    "count": 25,
+                    "score": 3.67882393048469,
+                    "value": 2.017
+                },
+                {
+                    "cvc_id": 78,
+                    "cvc_name": "SGJT-E(M)-A549",
+                    "path_id": 365,
+                    "gs_name": "KEGG_VALINE_LEUCINE_AND_ISOLEUCINE_DEGRADATION",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.01,
+                    "es": 0.651,
+                    "nes": 2.126,
+                    "gene_ratio": 0.558,
+                    "count": 24,
+                    "score": 4.252,
+                    "value": 2.126
+                },
+                {
+                    "cvc_id": 79,
+                    "cvc_name": "SGJT-E(L)-A549",
+                    "path_id": 365,
+                    "gs_name": "KEGG_VALINE_LEUCINE_AND_ISOLEUCINE_DEGRADATION",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.023,
+                    "es": 0.595,
+                    "nes": 1.931,
+                    "gene_ratio": 0.674,
+                    "count": 29,
+                    "score": 3.16350354865003,
+                    "value": 1.931
+                },
+                {
+                    "cvc_id": 2,
+                    "cvc_name": "SGJT-E(H)-A549",
+                    "path_id": 365,
+                    "gs_name": "KEGG_VALINE_LEUCINE_AND_ISOLEUCINE_DEGRADATION",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.003,
+                    "es": 0.64,
+                    "nes": 2.096,
+                    "gene_ratio": 0.605,
+                    "count": 26,
+                    "score": 5.28795385010759,
+                    "value": 2.096
+                },
+                {
+                    "cvc_id": 36,
+                    "cvc_name": "SGJT-W(H)-A549",
+                    "path_id": 365,
+                    "gs_name": "KEGG_VALINE_LEUCINE_AND_ISOLEUCINE_DEGRADATION",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.007,
+                    "es": 0.641,
+                    "nes": 2.047,
+                    "gene_ratio": 0.512,
+                    "count": 22,
+                    "score": 4.41108431209082,
+                    "value": 2.047
+                },
+                {
+                    "cvc_id": 37,
+                    "cvc_name": "SGJT-W(M)-A549",
+                    "path_id": 365,
+                    "gs_name": "KEGG_VALINE_LEUCINE_AND_ISOLEUCINE_DEGRADATION",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.021,
+                    "es": 0.62,
+                    "nes": 1.958,
+                    "gene_ratio": 0.605,
+                    "count": 26,
+                    "score": 3.28509462091099,
+                    "value": 1.958
+                }
+            ],
+            [
+                {
+                    "cvc_id": 38,
+                    "cvc_name": "SGJT-W(L)-A549",
+                    "path_id": 350,
+                    "gs_name": "KEGG_STEROID_HORMONE_BIOSYNTHESIS",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.097,
+                    "es": 0.498,
+                    "nes": 1.695,
+                    "gene_ratio": 0.415,
+                    "count": 22,
+                    "score": 1.71742191041872,
+                    "value": 1.695
+                },
+                {
+                    "cvc_id": 78,
+                    "cvc_name": "SGJT-E(M)-A549",
+                    "path_id": 350,
+                    "gs_name": "KEGG_STEROID_HORMONE_BIOSYNTHESIS",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.024,
+                    "es": 0.545,
+                    "nes": 1.858,
+                    "gene_ratio": 0.5,
+                    "count": 27,
+                    "score": 3.00956751289984,
+                    "value": 1.858
+                },
+                {
+                    "cvc_id": 79,
+                    "cvc_name": "SGJT-E(L)-A549",
+                    "path_id": 350,
+                    "gs_name": "KEGG_STEROID_HORMONE_BIOSYNTHESIS",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.053,
+                    "es": 0.519,
+                    "nes": 1.751,
+                    "gene_ratio": 0.415,
+                    "count": 22,
+                    "score": 2.23379295232902,
+                    "value": 1.751
+                },
+                {
+                    "cvc_id": 2,
+                    "cvc_name": "SGJT-E(H)-A549",
+                    "path_id": 350,
+                    "gs_name": "KEGG_STEROID_HORMONE_BIOSYNTHESIS",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.002,
+                    "es": 0.636,
+                    "nes": 2.17,
+                    "gene_ratio": 0.189,
+                    "count": 10,
+                    "score": 5.85676490940916,
+                    "value": 2.17
+                },
+                {
+                    "cvc_id": 36,
+                    "cvc_name": "SGJT-W(H)-A549",
+                    "path_id": 350,
+                    "gs_name": "KEGG_STEROID_HORMONE_BIOSYNTHESIS",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.101,
+                    "es": 0.488,
+                    "nes": 1.62,
+                    "gene_ratio": 0.604,
+                    "count": 32,
+                    "score": 1.61299937447212,
+                    "value": 1.62
+                },
+                {
+                    "cvc_id": 37,
+                    "cvc_name": "SGJT-W(M)-A549",
+                    "path_id": 350,
+                    "gs_name": "KEGG_STEROID_HORMONE_BIOSYNTHESIS",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.184,
+                    "es": 0.476,
+                    "nes": 1.566,
+                    "gene_ratio": 0.623,
+                    "count": 33,
+                    "score": 1.15129528916707,
+                    "value": 1.566
+                }
+            ],
+            [
+                {
+                    "cvc_id": 38,
+                    "cvc_name": "SGJT-W(L)-A549",
+                    "path_id": 190,
+                    "gs_name": "HALLMARK_FATTY_ACID_METABOLISM",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.013,
+                    "es": 0.437,
+                    "nes": 1.748,
+                    "gene_ratio": 0.427,
+                    "count": 64,
+                    "score": 3.29682702016765,
+                    "value": 1.748
+                },
+                {
+                    "cvc_id": 78,
+                    "cvc_name": "SGJT-E(M)-A549",
+                    "path_id": 190,
+                    "gs_name": "HALLMARK_FATTY_ACID_METABOLISM",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.01,
+                    "es": 0.434,
+                    "nes": 1.74,
+                    "gene_ratio": 0.325,
+                    "count": 49,
+                    "score": 3.48,
+                    "value": 1.74
+                },
+                {
+                    "cvc_id": 79,
+                    "cvc_name": "SGJT-E(L)-A549",
+                    "path_id": 190,
+                    "gs_name": "HALLMARK_FATTY_ACID_METABOLISM",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.016,
+                    "es": 0.418,
+                    "nes": 1.66,
+                    "gene_ratio": 0.397,
+                    "count": 60,
+                    "score": 2.98116082879116,
+                    "value": 1.66
+                },
+                {
+                    "cvc_id": 2,
+                    "cvc_name": "SGJT-E(H)-A549",
+                    "path_id": 190,
+                    "gs_name": "HALLMARK_FATTY_ACID_METABOLISM",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.002,
+                    "es": 0.473,
+                    "nes": 1.904,
+                    "gene_ratio": 0.393,
+                    "count": 59,
+                    "score": 5.13883888825578,
+                    "value": 1.904
+                },
+                {
+                    "cvc_id": 36,
+                    "cvc_name": "SGJT-W(H)-A549",
+                    "path_id": 190,
+                    "gs_name": "HALLMARK_FATTY_ACID_METABOLISM",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.007,
+                    "es": 0.465,
+                    "nes": 1.823,
+                    "gene_ratio": 0.298,
+                    "count": 45,
+                    "score": 3.92838627305401,
+                    "value": 1.823
+                },
+                {
+                    "cvc_id": 37,
+                    "cvc_name": "SGJT-W(M)-A549",
+                    "path_id": 190,
+                    "gs_name": "HALLMARK_FATTY_ACID_METABOLISM",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.01,
+                    "es": 0.448,
+                    "nes": 1.735,
+                    "gene_ratio": 0.311,
+                    "count": 47,
+                    "score": 3.47,
+                    "value": 1.735
+                }
+            ],
+            [
+                {
+                    "cvc_id": 38,
+                    "cvc_name": "SGJT-W(L)-A549",
+                    "path_id": 204,
+                    "gs_name": "HALLMARK_MTORC1_SIGNALING",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.008,
+                    "es": 0.42,
+                    "nes": 1.736,
+                    "gene_ratio": 0.388,
+                    "count": 76,
+                    "score": 3.64023578258199,
+                    "value": 1.736
+                },
+                {
+                    "cvc_id": 78,
+                    "cvc_name": "SGJT-E(M)-A549",
+                    "path_id": 204,
+                    "gs_name": "HALLMARK_MTORC1_SIGNALING",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.034,
+                    "es": 0.374,
+                    "nes": 1.549,
+                    "gene_ratio": 0.393,
+                    "count": 77,
+                    "score": 2.27473915750155,
+                    "value": 1.549
+                },
+                {
+                    "cvc_id": 79,
+                    "cvc_name": "SGJT-E(L)-A549",
+                    "path_id": 204,
+                    "gs_name": "HALLMARK_MTORC1_SIGNALING",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.055,
+                    "es": 0.364,
+                    "nes": 1.494,
+                    "gene_ratio": 0.342,
+                    "count": 67,
+                    "score": 1.8818981418956,
+                    "value": 1.494
+                },
+                {
+                    "cvc_id": 2,
+                    "cvc_name": "SGJT-E(H)-A549",
+                    "path_id": 204,
+                    "gs_name": "HALLMARK_MTORC1_SIGNALING",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.002,
+                    "es": 0.523,
+                    "nes": 2.176,
+                    "gene_ratio": 0.454,
+                    "count": 89,
+                    "score": 5.87295872943518,
+                    "value": 2.176
+                },
+                {
+                    "cvc_id": 36,
+                    "cvc_name": "SGJT-W(H)-A549",
+                    "path_id": 204,
+                    "gs_name": "HALLMARK_MTORC1_SIGNALING",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.007,
+                    "es": 0.456,
+                    "nes": 1.84,
+                    "gene_ratio": 0.357,
+                    "count": 70,
+                    "score": 3.96501960637377,
+                    "value": 1.84
+                },
+                {
+                    "cvc_id": 37,
+                    "cvc_name": "SGJT-W(M)-A549",
+                    "path_id": 204,
+                    "gs_name": "HALLMARK_MTORC1_SIGNALING",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.01,
+                    "es": 0.432,
+                    "nes": 1.725,
+                    "gene_ratio": 0.429,
+                    "count": 84,
+                    "score": 3.45,
+                    "value": 1.725
+                }
+            ],
+            [
+                {
+                    "cvc_id": 38,
+                    "cvc_name": "SGJT-W(L)-A549",
+                    "path_id": 209,
+                    "gs_name": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.054,
+                    "es": 0.365,
+                    "nes": 1.499,
+                    "gene_ratio": 0.429,
+                    "count": 79,
+                    "score": 1.90014175402537,
+                    "value": 1.499
+                },
+                {
+                    "cvc_id": 78,
+                    "cvc_name": "SGJT-E(M)-A549",
+                    "path_id": 209,
+                    "gs_name": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.432,
+                    "es": 0.295,
+                    "nes": 1.212,
+                    "gene_ratio": 0.462,
+                    "count": 85,
+                    "score": 0.441793698860327,
+                    "value": 1.212
+                },
+                {
+                    "cvc_id": 79,
+                    "cvc_name": "SGJT-E(L)-A549",
+                    "path_id": 209,
+                    "gs_name": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.522,
+                    "es": 0.279,
+                    "nes": 1.137,
+                    "gene_ratio": 0.397,
+                    "count": 73,
+                    "score": 0.321008638086428,
+                    "value": 1.137
+                },
+                {
+                    "cvc_id": 2,
+                    "cvc_name": "SGJT-E(H)-A549",
+                    "path_id": 209,
+                    "gs_name": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.055,
+                    "es": 0.345,
+                    "nes": 1.425,
+                    "gene_ratio": 0.391,
+                    "count": 72,
+                    "score": 1.7949831674707,
+                    "value": 1.425
+                },
+                {
+                    "cvc_id": 36,
+                    "cvc_name": "SGJT-W(H)-A549",
+                    "path_id": 209,
+                    "gs_name": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.009,
+                    "es": 0.4,
+                    "nes": 1.602,
+                    "gene_ratio": 0.353,
+                    "count": 65,
+                    "score": 3.2773034998782,
+                    "value": 1.602
+                },
+                {
+                    "cvc_id": 37,
+                    "cvc_name": "SGJT-W(M)-A549",
+                    "path_id": 209,
+                    "gs_name": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+                    "subcat_id": 2,
+                    "subcat": "HALLMARK",
+                    "padj": 0.026,
+                    "es": 0.395,
+                    "nes": 1.564,
+                    "gene_ratio": 0.402,
+                    "count": 74,
+                    "score": 2.47898168377364,
+                    "value": 1.564
+                }
+            ],
+            [
+                {
+                    "cvc_id": 38,
+                    "cvc_name": "SGJT-W(L)-A549",
+                    "path_id": 317,
+                    "gs_name": "KEGG_OOCYTE_MEIOSIS",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.1,
+                    "es": 0.406,
+                    "nes": 1.543,
+                    "gene_ratio": 0.375,
+                    "count": 39,
+                    "score": 1.543,
+                    "value": 1.543
+                },
+                {
+                    "cvc_id": 78,
+                    "cvc_name": "SGJT-E(M)-A549",
+                    "path_id": 317,
+                    "gs_name": "KEGG_OOCYTE_MEIOSIS",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.095,
+                    "es": 0.407,
+                    "nes": 1.551,
+                    "gene_ratio": 0.433,
+                    "count": 45,
+                    "score": 1.585550688197,
+                    "value": 1.551
+                },
+                {
+                    "cvc_id": 79,
+                    "cvc_name": "SGJT-E(L)-A549",
+                    "path_id": 317,
+                    "gs_name": "KEGG_OOCYTE_MEIOSIS",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.317,
+                    "es": 0.351,
+                    "nes": 1.329,
+                    "gene_ratio": 0.362,
+                    "count": 38,
+                    "score": 0.663092240512608,
+                    "value": 1.329
+                },
+                {
+                    "cvc_id": 2,
+                    "cvc_name": "SGJT-E(H)-A549",
+                    "path_id": 317,
+                    "gs_name": "KEGG_OOCYTE_MEIOSIS",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.005,
+                    "es": 0.465,
+                    "nes": 1.78,
+                    "gene_ratio": 0.413,
+                    "count": 43,
+                    "score": 4.09583339228189,
+                    "value": 1.78
+                },
+                {
+                    "cvc_id": 36,
+                    "cvc_name": "SGJT-W(H)-A549",
+                    "path_id": 317,
+                    "gs_name": "KEGG_OOCYTE_MEIOSIS",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.009,
+                    "es": 0.475,
+                    "nes": 1.766,
+                    "gene_ratio": 0.423,
+                    "count": 44,
+                    "score": 3.61280772833015,
+                    "value": 1.766
+                },
+                {
+                    "cvc_id": 37,
+                    "cvc_name": "SGJT-W(M)-A549",
+                    "path_id": 317,
+                    "gs_name": "KEGG_OOCYTE_MEIOSIS",
+                    "subcat_id": 3,
+                    "subcat": "KEGG",
+                    "padj": 0.072,
+                    "es": 0.441,
+                    "nes": 1.624,
+                    "gene_ratio": 0.375,
+                    "count": 39,
+                    "score": 1.85569202579562,
+                    "value": 1.624
+                }
+            ]
+        ],
+        "state": "SUCCESS"
+    },
+    "bPlotData": [
+        {}
+    ]
+}

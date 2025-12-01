@@ -1,0 +1,56 @@
+.k-case-card {
+    max-height: 350px;
+}
+
+.zoom {
+    cursor: move;
+    fill: none;
+    pointer-events: all;
+}
+
+rect.selection {
+    stroke          : #333;
+    stroke-dasharray: 4px;
+    stroke-opacity  : 0.5;
+    fill            : transparent;
+}
+
+rect.cell-border {
+    stroke: #eee;
+    stroke-width:0.3px;
+}
+
+rect.cell-selected {
+    stroke: rgb(51,102,153);
+    stroke-width:0.5px;
+}
+
+rect.cell-hover {
+    stroke: #F00;
+    stroke-width:0.3px;
+}
+text.mono {
+    font-size: 9pt;
+    font-family: Consolas, courier;
+    fill: #aaa;
+}
+
+.rowLink, .colLink {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+}
+
+.cell:hover {
+    stroke: black;
+}
+
+#legend {
+    margin: auto 50px auto;
+    /*border: 1px solid red;*/ /*for testing*/
+}
+
+.searchTextColor {
+    fill: #ff616e;
+    font-weight: bold;
+}
