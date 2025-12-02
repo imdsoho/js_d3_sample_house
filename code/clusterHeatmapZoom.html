@@ -3,12 +3,10 @@
       xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <title>Transcriptome Analysis Web Service</title>
+    <title>cluster heatmap zoom</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="KiIOM Transcriptome Analysis Web Service">
-    <meta name="author" content="Korea Institute Oriental Medicine">
 
     <meta http-equiv="Content-Security-Policy"
           content="default-src 'self';
@@ -27,14 +25,14 @@
     <script src="/static/assets/js/d3/d3.v7.js" type="text/javascript"></script>
     <script src="/static/assets/js/d3/color-legend.js" type="text/javascript"></script>
     <script src="/static/assets/js/d3/category-legend.js" type="text/javascript"></script>
-
     <script src="/static/assets/js/lodash/lodash-4.17.15.js" type="text/javascript"></script>
     <!-- common -->
+
+    <link href="/static/sbl/css/heatmap/heatmap.css" rel="stylesheet">
+    <script defer src="/static/sbl/js/heatmap/heatmap.js" type="text/javascript"></script>
+    <script defer src="/static/sbl/js/heatmap/heatmap.d3.v7.js" type="text/javascript"></script>
 </head>
 
-<link href="/static/sbl/css/heatmap/heatmap.css" rel="stylesheet">
-<script defer src="/static/sbl/js/heatmap/heatmap.js" type="text/javascript"></script>
-<script defer src="/static/sbl/js/heatmap/heatmap.d3.v7.js" type="text/javascript"></script>
 
 <body class="d-flex flex-column min-vh-100">
 
@@ -47,7 +45,6 @@
                 <div class="col px-1">
                     <div class="px-2 pt-2 pb-5 mx-0 mt-0 mb-0 k-bg-secondary rounded-2">
                         <h1 class="h4">Cluster Heatmap Zoom Sample</h1>
-                        [DATA] http://koremap.systemsbiology.ai.kr/deg-pathway-heatmap-gsea/
                     </div>
                 </div>
                 <!-- title description -->
