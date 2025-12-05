@@ -52,8 +52,6 @@ let hCLegend;
 
 let hXAxisTopPos = 100;
 
-//let hZoom = d3.zoom();
-
 const hSvg = d3.select("#heatmapChart");
 
 const hBgBox = d3.select('#heatmapChart')
@@ -66,35 +64,28 @@ const hBgBox = d3.select('#heatmapChart')
 const hContainer = hSvg.append("g")
     .attr("transform", `translate(${hMargin.left}, ${hMargin.top})`);
 
-const zoomBox = hContainer.append('rect')
-    .attr('class', 'zoom');
+const hGContentArea = hContainer.append("g")
+    .attr("class", "contents");
+const hGYcluster = hGContentArea.append("g")
+    .attr("class", "rowTree");
+const hGHeatmap = hGContentArea.append("g")
+    .attr("class", "heatmap");
+const hGYaxis = hGContentArea.append("g")
+    .attr("class", "yAxis");
 
 const hGXcluster = hContainer.append("g")
-    .attr("class", "colTree");
-
-const hGYcluster = hContainer.append("g")
-    .attr("class", "rowTree");
-
-const hGHeatmap = hContainer.append("g")
-    .attr("class", "heatmap");
-//.call(hZoom);
-
+    .attr("class", "colTree")
 const hGXTopAxis = hContainer.append("g")
     .attr("class", "xAxis");
+
 const hGXBottomaxis = hContainer.append("g")
     .attr("class", "xAxis");
-
-const hGYaxis = hContainer.append("g")
-    .attr("class", "yAxis");
 
 const hTooltip = d3.select('body')
     .append('div')
     .attr('class', 'tooltip');
 
-/*let zoomBox = hSvg.append('rect')
-    .attr('class', 'zoom')
-    .attr('width', hWidth)
-    .attr('height', hHeight);*/
+let hZoom;
 
 function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
     let plotData = _plotData;
@@ -109,21 +100,26 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
     hRowNumber = plotData.heatmap.matrix.length;
     calHeatmapVarValue();
 
-    /*hZoom.scaleExtent([1, hZoomScale])
-        .translateExtent([[0, 0], [hWidth, hHeight]])
-        .on('zoom', handleZoom);*/
-
     hSvg.attr('width', hWidth)
         .attr('height', hHeight)
         .attr("viewBox", [0, 0, hWidth, hHeight])
-        .attr("style", "max-width: 100%; height: auto;");
+        .attr("style", "max-width: auto; height: auto;");
 
     hBgBox.attr('width', hWidth)
         .attr('height', hHeight);
 
-    /*zoomBox.attr('width', hWidth)
-        .attr('height', hHeight)
-        .call(hZoom);*/
+    hGContentArea.append("clipPath")
+        .attr("id", "heatmapClip")
+        .append("rect")
+        .attr("width", hGHeatmapWH.width)
+        .attr("height", hGHeatmapWH.height);
+    hGContentArea.append("clipPath")
+        .attr("id", "axisClip")
+        .append("rect")
+        .attr("width", 1000)
+        .attr("height", hGHeatmapWH.height);
+    hGHeatmap.attr("clip-path",  "url(#heatmapClip)");
+    hGYaxis.attr("clip-path",  "url(#axisClip)");
 
     matrix = [];
     for (let r = 0; r < hRowNumber; r++) {
@@ -163,6 +159,56 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
         .call(g => g.select(".domain").remove())
         .style("font-size", hFontYSize);
 
+    hZoom = d3.zoom()
+        .scaleExtent([1, 5])
+        .translateExtent([[0, 0], [hWidth, hHeight]])
+        .filter(filter)
+        .on("zoom", zoomed);
+
+    hGHeatmap.call(hZoom);
+
+    //let zoomIdentity = d3.zoomIdentity;
+    let zoomTranslate = hGYaxis.attr('transform');
+    function zoomed(event) {
+        let transform = event.transform;
+        /*
+        k: The scale factor (zoom level). A value of 1 represents no zoom. // d3.zoom().scaleExtent
+        x: The x-translation (pan) in pixels.
+        y: The y-translation (pan) in pixels.
+
+        Transform {k: 1.2030250419728106, x: -66.17046963921177, y: -77.50447519816112}
+        Transform {k: 1.4472692516136827, x: -145.77520165428513, y: -170.74429972650955}
+        Transform {k: 1.7411011521685087, x: -241.541687727953, y: -282.9141435432633}
+        */
+
+        let newYRange = hYScale.range().map(function (d){
+            return transform.applyY(d);
+        })
+        let newYScale = d3.scaleBand()
+            .domain(hYScale.domain())
+            .range(newYRange)
+            .padding(hYScale.padding());
+        hYAxis = d3.axisRight(newYScale).tickSize(0);
+        hGYaxis.attr('transform', zoomTranslate);
+        hGYaxis.call(hYAxis)
+            .call(g => g.select(".domain").remove())
+            .style("font-size", hFontYSize);
+
+        hGHeatmap.selectAll(".mapEl")
+            /*.attr("x", function(d) {
+                return transform.applyX(d.col * hCellWSize);
+            })*/
+            .attr("y", function(d) {
+                return transform.applyY(d.row * hCellHSize);
+            })
+            /*.attr("width", function(d) {
+                return hCellWSize * transform.k;
+            })*/
+            .attr("height", function(d) {
+                return (hCellHSize * transform.k);
+            });
+    }
+
     //hGHeatmap.attr("transform", `translate(${heatmapXpos}, ${heatmapYpos})`);
     hGHeatmap.attr("transform", `translate(${heatmapXpos}, ${heatmapYpos + hXAxisTopPos})`);
     let _hGHeatmap = hGHeatmap.selectAll(".rect")
@@ -172,7 +218,7 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
         .join(
             function (enter){
                 return enter.append("rect")
-                    .attr("class", "rect")
+                    .attr("class", "mapEl")
                     .attr("x", d => d.col * hCellWSize)
                     .attr("y", d => d.row * hCellHSize)
                     .attr("width", hCellWSize)
@@ -286,6 +332,13 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
             colorValue = d;
         }
         return hColorScale(colorValue);
+    }
+
+
+    // prevent scrolling then apply the default filter
+    function filter(event) {
+        event.preventDefault();
+        return (!event.ctrlKey || event.type === 'wheel') && !event.button;
     }
 
     function hTipEnter(e, d){
