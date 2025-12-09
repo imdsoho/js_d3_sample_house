@@ -66,14 +66,14 @@ const hContainer = hSvg.append("g")
 
 const hGContentArea = hContainer.append("g")
     .attr("class", "contents");
-const hGYcluster = hGContentArea.append("g")
+let hGYcluster = hGContentArea.append("g")
     .attr("class", "rowTree");
 const hGHeatmap = hGContentArea.append("g")
     .attr("class", "heatmap");
 const hGYaxis = hGContentArea.append("g")
     .attr("class", "yAxis");
 
-const hGXcluster = hContainer.append("g")
+let hGXcluster = hContainer.append("g")
     .attr("class", "colTree")
 const hGXTopAxis = hContainer.append("g")
     .attr("class", "xAxis");
@@ -118,8 +118,14 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
         .append("rect")
         .attr("width", 1000)
         .attr("height", hGHeatmapWH.height);
+    hGContentArea.append("clipPath")
+        .attr("id", "clusterClip")
+        .append("rect")
+        .attr("width", 1000)
+        .attr("height", hGHeatmapWH.height);
     hGHeatmap.attr("clip-path",  "url(#heatmapClip)");
     hGYaxis.attr("clip-path",  "url(#axisClip)");
+    hGYcluster.attr("clip-path",  "url(#clusterClip)");
 
     matrix = [];
     for (let r = 0; r < hRowNumber; r++) {
@@ -160,54 +166,12 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
         .style("font-size", hFontYSize);
 
     hZoom = d3.zoom()
-        .scaleExtent([1, 5])
-        .translateExtent([[0, 0], [hWidth, hHeight]])
+        .scaleExtent([1, 2])
+        //.translateExtent([[0, 0], [hWidth, hHeight]])
         .filter(filter)
         .on("zoom", zoomed);
 
     hGHeatmap.call(hZoom);
-
-    //let zoomIdentity = d3.zoomIdentity;
-    let zoomTranslate = hGYaxis.attr('transform');
-    function zoomed(event) {
-        let transform = event.transform;
-        /*
-        k: The scale factor (zoom level). A value of 1 represents no zoom. // d3.zoom().scaleExtent
-        x: The x-translation (pan) in pixels.
-        y: The y-translation (pan) in pixels.
-
-        Transform {k: 1.2030250419728106, x: -66.17046963921177, y: -77.50447519816112}
-        Transform {k: 1.4472692516136827, x: -145.77520165428513, y: -170.74429972650955}
-        Transform {k: 1.7411011521685087, x: -241.541687727953, y: -282.9141435432633}
-        */
-
-        let newYRange = hYScale.range().map(function (d){
-            return transform.applyY(d);
-        })
-        let newYScale = d3.scaleBand()
-            .domain(hYScale.domain())
-            .range(newYRange)
-            .padding(hYScale.padding());
-        hYAxis = d3.axisRight(newYScale).tickSize(0);
-        hGYaxis.attr('transform', zoomTranslate);
-        hGYaxis.call(hYAxis)
-            .call(g => g.select(".domain").remove())
-            .style("font-size", hFontYSize);
-
-        hGHeatmap.selectAll(".mapEl")
-            /*.attr("x", function(d) {
-                return transform.applyX(d.col * hCellWSize);
-            })*/
-            .attr("y", function(d) {
-                return transform.applyY(d.row * hCellHSize);
-            })
-            /*.attr("width", function(d) {
-                return hCellWSize * transform.k;
-            })*/
-            .attr("height", function(d) {
-                return (hCellHSize * transform.k);
-            });
-    }
 
     //hGHeatmap.attr("transform", `translate(${heatmapXpos}, ${heatmapYpos})`);
     hGHeatmap.attr("transform", `translate(${heatmapXpos}, ${heatmapYpos + hXAxisTopPos})`);
@@ -239,8 +203,6 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
                         }
                         return color;
                     })
-                    .on("mouseenter", hTipEnter)
-                    .on("mouseleave", hTipLeave);
             },
             function (update){
                 return update.attr("x", d => d.col * hCellWSize)
@@ -278,7 +240,7 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
             });
         rowNodes = rowCluster(rowRoot);
 
-        let _hGXcluster = hGXcluster.selectAll(".colLink")
+        hGXcluster.selectAll(".colLink")
             .data(colRoot.links(colNodes), function (d) {
                 return JSON.stringify(d.source.data + ":" + d.target.data);
             })
@@ -297,7 +259,7 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
                 }
             );
 
-        let _hGYcluster = hGYcluster.selectAll(".rowLink")
+        hGYcluster.selectAll(".rowLink")
             .data(rowRoot.links(rowNodes), function (d) {
                 return JSON.stringify(d.source.data + ":" + d.target.data);
             })
@@ -322,6 +284,109 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
         hGYcluster.selectAll(".rowLink").remove();
     }
 
+    function handleZoom(e) {
+        // event.transform = {k:1.2483305489016119, x:-220.65721335838862, y:-120.44548471808594}
+        let transform = d3.zoomTransform(this);
+        // {k:1.2483305489016119, x:-220.65721335838862, y:-120.44548471808594}
+
+        d3.selectAll('.dot')
+            .attr('transform', transform)
+            .attr('r', 5 / Math.sqrt(transform.k));
+
+        gXAxis.call(xAxis.scale(e.transform.rescaleX(xScale)));
+        gYAxis.call(yAxis.scale(e.transform.rescaleY(yScale)));
+
+        svg.selectAll('.threshold')
+            .attr('transform', transform)
+            .attr('stroke-width', 1 / transform.k);
+    }
+
+    let zoomIdentity = d3.zoomIdentity;
+    let prevTransform = d3.zoomTransform(zoomIdentity);
+
+
+    /*console.log(rowRoot.links(rowNodes));
+    const xScale = d3.scaleLinear()
+        .domain(d3.extent(rowNodes, d => d[0]))
+        .range([0, 100])
+        .nice();*/
+
+    function zoomed(event) {
+        let transform = event.transform;
+        //console.log("[PREV] ", prevTransform);
+        const point = center(event, this);
+        console.log("[POINT] ", point)
+        console.log("[CURR] ", transform);
+        //console.log("-----------------");
+        /*
+        k: The scale factor (zoom level). A value of 1 represents no zoom. // d3.zoom().scaleExtent
+        x: The x-translation (pan) in pixels.
+        y: The y-translation (pan) in pixels.
+
+        Transform {k: 1.2030250419728106, x: -66.17046963921177, y: -77.50447519816112}
+        Transform {k: 1.4472692516136827, x: -145.77520165428513, y: -170.74429972650955}
+        Transform {k: 1.7411011521685087, x: -241.541687727953, y: -282.9141435432633}
+        */
+
+        let newYRange = hYScale.range().map(function (d){
+            return transform.applyY(d);
+        })
+        let newYScale = d3.scaleBand()
+            .domain(hYScale.domain())
+            .range(newYRange)
+            .padding(hYScale.padding());
+        hYAxis = d3.axisRight(newYScale).tickSize(0);
+        hGYaxis.call(hYAxis)
+            .call(g => g.select(".domain").remove())
+            .style("font-size", hFontYSize);
+
+        hGHeatmap.selectAll(".mapEl")
+            /*.attr("x", function(d) {
+                return transform.applyX(d.col * hCellWSize);
+            })*/
+            .attr("y", function(d) {
+                return transform.applyY(d.row * hCellHSize);
+            })
+            /*.attr("width", function(d) {
+                return hCellWSize * transform.k;
+            })*/
+            .attr("height", function(d) {
+                return (hCellHSize * transform.k);
+            });
+
+
+
+        //let nextTransformX = prevTransform.x * prevTransform.k + prevTransform.x;
+        //console.log("[X] ", nextTransformX);
+        let x = transform.x + (prevTransform.x * transform.k);
+        x = 0;
+        let clusterT = new d3.ZoomTransform(transform.k, x, transform.y);
+        if(transform.k === 1){
+            clusterT = zoomIdentity;
+        }
+
+        d3.selectAll(".rowLink")
+            .attr("transform", clusterT);
+
+        prevTransform = transform;
+    }
+
+    function center(event, target) {
+        const p = d3.pointers(event, target);
+        //return [d3.mean(p, d => d[0]), d3.mean(p, d => d[1])];
+        /*if (event.sourceEvent) {
+            const p = d3.pointers(event, target);
+            return [d3.mean(p, d => d[0]), d3.mean(p, d => d[1])];
+        }
+        return [width / 2, height / 2];*/
+        return p;
+    }
+
+    function elbow(d, i) {
+        return "M" + d.source.y + "," + d.source.x
+            + "V" + d.target.x + "H" + d.target.y;
+    }
+
     function colorPicker(d){
         let colorValue = 0;
 
@@ -334,36 +399,10 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
         return hColorScale(colorValue);
     }
 
-
     // prevent scrolling then apply the default filter
     function filter(event) {
         event.preventDefault();
         return (!event.ctrlKey || event.type === 'wheel') && !event.button;
-    }
-
-    function hTipEnter(e, d){
-        let info = plotInfoData[d.row][d.col];
-        //if (info !== 0){
-        let infoStr = `[ ${info.gs_name} ] [${info.cvc_name}] <br/>
-                        &#183; count : ${info.count} <br/>
-                        &#183; es : ${info.es} <br/>
-                        &#183; gene_ratio : ${info.gene_ratio} <br/>
-                        &#183; nes : ${info.nes} <br/>
-                        &#183; padj : ${info.padj} <br/>
-                        &#183; score : ${info.score} <br/>
-                        &#183; subcat : ${info.subcat} <br/>
-                        &#183; value : ${info.value} <br/>`;
-
-        hTooltip.style('visibility', 'visible')
-            .style('font-size', '12px')
-            .style('top', `${e.pageY - 5}px`)
-            .style('left', `${e.pageX + 10}px`)
-            .html(infoStr);
-        //}
-    }
-
-    function hTipLeave(e){
-        hTooltip.style('visibility', 'hidden');
     }
 
     function calHeatmapVarValue(){
@@ -426,10 +465,6 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
         hLegendRange = 5;
     }
 
-    function elbow(d, i) {
-        return "M" + d.source.y + "," + d.source.x
-            + "V" + d.target.x + "H" + d.target.y;
-    }
 
     function labelsFromTree (nodes) {
         let labels = [];
@@ -470,6 +505,15 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
     });
     document.getElementById("heatmapNesLegend").innerHTML = "";
     document.getElementById("heatmapNesLegend").append(hLegend);
+}
+
+function zoomReset() {
+
+    d3.select('.heatmap')
+        .transition()
+        .call(hZoom.scaleTo, 1)
+        .call(hZoom.translateTo, 1,1)
+
 }
 
 /*function handleZoom(e) {
