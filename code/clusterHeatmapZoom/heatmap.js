@@ -3,7 +3,7 @@ $(window).on('load', function() {
     createHeatmap();
 
     function createHeatmap() {
-        let heatmapApiUrl = "http://localhost:63342/js_d3_sample_house/data/clusterHeatmapZoomData.json";
+        let heatmapApiUrl = "http://localhost:63342/js_d3_sample_house/data/clusterHeatmapZoomData_s.json";
         $.ajax({
             type: 'GET',
             async: true,

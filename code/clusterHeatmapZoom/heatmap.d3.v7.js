@@ -166,7 +166,7 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
         .style("font-size", hFontYSize);
 
     hZoom = d3.zoom()
-        .scaleExtent([1, 2])
+        .scaleExtent([1, 3])
         //.translateExtent([[0, 0], [hWidth, hHeight]])
         .filter(filter)
         .on("zoom", zoomed);
@@ -284,49 +284,63 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
         hGYcluster.selectAll(".rowLink").remove();
     }
 
-    function handleZoom(e) {
-        // event.transform = {k:1.2483305489016119, x:-220.65721335838862, y:-120.44548471808594}
-        let transform = d3.zoomTransform(this);
-        // {k:1.2483305489016119, x:-220.65721335838862, y:-120.44548471808594}
-
-        d3.selectAll('.dot')
-            .attr('transform', transform)
-            .attr('r', 5 / Math.sqrt(transform.k));
-
-        gXAxis.call(xAxis.scale(e.transform.rescaleX(xScale)));
-        gYAxis.call(yAxis.scale(e.transform.rescaleY(yScale)));
-
-        svg.selectAll('.threshold')
-            .attr('transform', transform)
-            .attr('stroke-width', 1 / transform.k);
-    }
-
     let zoomIdentity = d3.zoomIdentity;
-    let prevTransform = d3.zoomTransform(zoomIdentity);
+    let prevTransform = d3.zoomIdentity;
+    let goodTransform = d3.zoomIdentity;
 
-
-    /*console.log(rowRoot.links(rowNodes));
-    const xScale = d3.scaleLinear()
-        .domain(d3.extent(rowNodes, d => d[0]))
-        .range([0, 100])
-        .nice();*/
+    let initX = -22.434810147;
+    let firstZoomFlag = true;
+    let maxZoomFlag = false;
 
     function zoomed(event) {
         let transform = event.transform;
-        //console.log("[PREV] ", prevTransform);
-        const point = center(event, this);
-        console.log("[POINT] ", point)
-        console.log("[CURR] ", transform);
-        //console.log("-----------------");
-        /*
-        k: The scale factor (zoom level). A value of 1 represents no zoom. // d3.zoom().scaleExtent
-        x: The x-translation (pan) in pixels.
-        y: The y-translation (pan) in pixels.
+        //const currPoint = d3.pointers(event);
+        let pk = Number(prevTransform.k);
+        let tk = Number(transform.k);
 
-        Transform {k: 1.2030250419728106, x: -66.17046963921177, y: -77.50447519816112}
-        Transform {k: 1.4472692516136827, x: -145.77520165428513, y: -170.74429972650955}
-        Transform {k: 1.7411011521685087, x: -241.541687727953, y: -282.9141435432633}
-        */
+        // zoom을 처음 적용할 때
+        if(firstZoomFlag) {
+            console.log("Init Zoom");
+            prevTransform = zoomIdentity;   // prev를 초기값으로 설정
+            goodTransform = makeNextTransform(prevTransform, transform);
+            d3.selectAll(".rowLink")
+                /*.attr("d", function (d, i){
+                    return "M" + transform.applyY(d.source.y) + "," + transform.applyX(d.source.x)
+                        + "V" + transform.applyX(d.target.x) + "H" + transform.applyY(d.target.y);
+                })
+                * transform을 사용하는 작업이라서 x, y, k의 값을 화면에 맞게 적용할 수 없음.*/
+                .attr("transform", goodTransform);
+            prevTransform = goodTransform;
+            firstZoomFlag = false;
+        }
+        else{
+            if(tk === 1) {
+                prevTransform = zoomIdentity;   // prev를 초기값으로 설정
+                goodTransform = makeNextTransform(prevTransform, transform);
+                d3.selectAll(".rowLink")
+                    .attr("transform", goodTransform);
+                prevTransform = goodTransform;
+            }
+
+            if(pk < tk) {
+                //console.log("ZOOM OUT");
+                if(!maxZoomFlag) {
+                    goodTransform = makeNextTransform(prevTransform, transform);
+                    d3.selectAll(".rowLink")
+                        .attr("transform", goodTransform);
+                    prevTransform = goodTransform;
+                    maxZoomFlag = tk === 3;
+                }
+            }
+            else {
+                //console.log("ZOOM IN");
+                goodTransform = makeBeforeTransform(prevTransform, transform);
+                d3.selectAll(".rowLink")
+                    .attr("transform", goodTransform);
+                prevTransform = goodTransform;
+            }
+        }
+        sleep(50);
 
         let newYRange = hYScale.range().map(function (d){
             return transform.applyY(d);
@@ -353,33 +367,32 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
             .attr("height", function(d) {
                 return (hCellHSize * transform.k);
             });
+    }
 
+    function sleep(sec) {
+        return new Promise(resolve => setTimeout(resolve, sec * 1000));
+    }
 
+    function makeNextTransform(prev, curr){
+        let xPos = curr.k * initX + prev.x;
+        let transform = new d3.ZoomTransform(curr.k, xPos, curr.y);
+        console.log(transform);
+        return transform;
+    }
 
-        //let nextTransformX = prevTransform.x * prevTransform.k + prevTransform.x;
-        //console.log("[X] ", nextTransformX);
-        let x = transform.x + (prevTransform.x * transform.k);
-        x = 0;
-        let clusterT = new d3.ZoomTransform(transform.k, x, transform.y);
-        if(transform.k === 1){
-            clusterT = zoomIdentity;
-        }
-
-        d3.selectAll(".rowLink")
-            .attr("transform", clusterT);
-
-        prevTransform = transform;
+    function makeBeforeTransform(prev, curr){
+        let xPos = prev.x - curr.k * initX
+        let transform = new d3.ZoomTransform(curr.k, xPos, curr.y);
+        console.log(transform);
+        return transform;
     }
 
     function center(event, target) {
-        const p = d3.pointers(event, target);
-        //return [d3.mean(p, d => d[0]), d3.mean(p, d => d[1])];
-        /*if (event.sourceEvent) {
+        if (event.sourceEvent) {
             const p = d3.pointers(event, target);
             return [d3.mean(p, d => d[0]), d3.mean(p, d => d[1])];
         }
-        return [width / 2, height / 2];*/
-        return p;
+        return [width / 2, height / 2];
     }
 
     function elbow(d, i) {
@@ -465,7 +478,6 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
         hLegendRange = 5;
     }
 
-
     function labelsFromTree (nodes) {
         let labels = [];
         nodes.each(function(d){
@@ -476,7 +488,7 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
         return labels;
     }
 
-    let hLegendKey = ["0.01", "0.05"];
+    /*let hLegendKey = ["0.01", "0.05"];
     let rectXPosFunc = () => 3;
     let textXPosFunc = () => 27;
     let rectYPosFunc = (d,i)=> i === 0 ? 0 : i*35;
@@ -504,49 +516,5 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
         width: 300
     });
     document.getElementById("heatmapNesLegend").innerHTML = "";
-    document.getElementById("heatmapNesLegend").append(hLegend);
+    document.getElementById("heatmapNesLegend").append(hLegend);*/
 }
-
-function zoomReset() {
-
-    d3.select('.heatmap')
-        .transition()
-        .call(hZoom.scaleTo, 1)
-        .call(hZoom.translateTo, 1,1)
-
-}
-
-/*function handleZoom(e) {
-    // event.transform = {k:1.2483305489016119, x:-220.65721335838862, y:-120.44548471808594}
-    let transform = d3.zoomTransform(this);
-    // {k:1.2483305489016119, x:-220.65721335838862, y:-120.44548471808594}
-
-    d3.selectAll('.rect')
-        .attr('transform', transform)
-        .attr("width", hCellWSize * transform.k)
-        .attr("height", hCellHSize * transform.k);
-
-    // https://stackoverflow.com/questions/49334856/scaleband-with-zoom
-    //https://stackoverflow.com/questions/17497856/d3-how-to-zoom-in-on-svg-text-that-stays-within-an-svg-rectangle
-    //hGXTopAxis.call(d3.axisBottom.scale(e.transform.rescaleX(hXScale)));
-    //hGYaxis.call(d3.axisRight.scale(e.transform.rescaleY(hYScale)));
-
-    /*svg.selectAll('.threshold')
-        .attr('transform', transform)
-        .attr('stroke-width', 1 / transform.k);* /
-}
-function hZoomIn() {
-    d3.select('#heatmapChart')
-        .transition()
-        .call(hZoom.scaleBy, 1.1);
-}
-function hZoomOut() {
-    d3.select('#heatmapChart')
-        .transition()
-        .call(hZoom.scaleBy, 0.9);
-}
-function hZoomReset() {
-    d3.select('#heatmapChart')
-        .transition()
-        .call(hZoom.scaleTo, 1);
-}*/
