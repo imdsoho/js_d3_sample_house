@@ -86,6 +86,7 @@ const hTooltip = d3.select('body')
     .attr('class', 'tooltip');
 
 let hZoom;
+let zoomMax = 5;
 
 function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
     let plotData = _plotData;
@@ -166,12 +167,20 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
         .style("font-size", hFontYSize);
 
     hZoom = d3.zoom()
-        .scaleExtent([1, 3])
+        .scaleExtent([1, zoomMax])
         //.translateExtent([[0, 0], [hWidth, hHeight]])
         .filter(filter)
+        //.wheelDelta(myDelta)
         .on("zoom", zoomed);
 
     hGHeatmap.call(hZoom);
+
+    function myDelta(event) {
+        // 1500은 속도를 조절하는 상수입니다.
+        // 이 값을 증가시키면 줌 속도가 느려지고, 감소시키면 빨라집니다.
+        let zoomSpeedControl = 1500;
+        return -event.deltaY * (event.deltaMode ? 120 : 1) / zoomSpeedControl;
+    }
 
     //hGHeatmap.attr("transform", `translate(${heatmapXpos}, ${heatmapYpos})`);
     hGHeatmap.attr("transform", `translate(${heatmapXpos}, ${heatmapYpos + hXAxisTopPos})`);
@@ -284,23 +293,25 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
         hGYcluster.selectAll(".rowLink").remove();
     }
 
-    let zoomIdentity = d3.zoomIdentity;
-    let prevTransform = d3.zoomIdentity;
-    let goodTransform = d3.zoomIdentity;
-
     let initX = -22.434810147;
     let firstZoomFlag = true;
     let maxZoomFlag = false;
 
+    let zoomIdentity = d3.zoomIdentity;
+    let prevTransform = d3.zoomIdentity;
+    let goodTransform = d3.zoomIdentity;
+
     function zoomed(event) {
         let transform = event.transform;
+
         //const currPoint = d3.pointers(event);
         let pk = Number(prevTransform.k);
         let tk = Number(transform.k);
 
         // zoom을 처음 적용할 때
         if(firstZoomFlag) {
-            console.log("Init Zoom");
+            sleep(1);
+            //console.log("Start Zoom");
             prevTransform = zoomIdentity;   // prev를 초기값으로 설정
             goodTransform = makeNextTransform(prevTransform, transform);
             d3.selectAll(".rowLink")
@@ -315,6 +326,7 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
         }
         else{
             if(tk === 1) {
+                //console.log("Init Zoom");
                 prevTransform = zoomIdentity;   // prev를 초기값으로 설정
                 goodTransform = makeNextTransform(prevTransform, transform);
                 d3.selectAll(".rowLink")
@@ -322,25 +334,30 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
                 prevTransform = goodTransform;
             }
 
-            if(pk < tk) {
-                //console.log("ZOOM OUT");
-                if(!maxZoomFlag) {
-                    goodTransform = makeNextTransform(prevTransform, transform);
+            if(maxZoomFlag){
+                //console.log("MAX Zoom");
+                maxZoomFlag = false;
+            }
+            else{
+                if(pk < tk) {
+                    //console.log("ZOOM OUT");
+                    if(!maxZoomFlag) {
+                        goodTransform = makeNextTransform(prevTransform, transform);
+                        d3.selectAll(".rowLink")
+                            .attr("transform", goodTransform);
+                        prevTransform = goodTransform;
+                        maxZoomFlag = tk === zoomMax;
+                    }
+                }
+                else {
+                    //console.log("ZOOM IN");
+                    goodTransform = makeBeforeTransform(prevTransform, transform);
                     d3.selectAll(".rowLink")
                         .attr("transform", goodTransform);
                     prevTransform = goodTransform;
-                    maxZoomFlag = tk === 3;
                 }
             }
-            else {
-                //console.log("ZOOM IN");
-                goodTransform = makeBeforeTransform(prevTransform, transform);
-                d3.selectAll(".rowLink")
-                    .attr("transform", goodTransform);
-                prevTransform = goodTransform;
-            }
         }
-        sleep(50);
 
         let newYRange = hYScale.range().map(function (d){
             return transform.applyY(d);
@@ -381,7 +398,7 @@ function drawHeatmapGraph(_plotData, clusterLayerDisplayFlag) {
     }
 
     function makeBeforeTransform(prev, curr){
-        let xPos = prev.x - curr.k * initX
+        let xPos = prev.x - (curr.k * initX) + (curr.k * zoomMax);
         let transform = new d3.ZoomTransform(curr.k, xPos, curr.y);
         console.log(transform);
         return transform;
